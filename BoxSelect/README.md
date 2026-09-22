@@ -204,7 +204,9 @@ Order
   │
   └── OrderItem ─── Product
 An order can contain multiple order items, and each order item references a product and its quantity.
+
 7. Box Selection Logic
+
 The recommendation process follows these steps.
 Step 1 — Calculate Total Order Weight
 For every order item:
@@ -260,7 +262,9 @@ lowest cost if tied
         ↓
 lowest ID if still tied
 This makes the selection deterministic.
+
 9. API Endpoints
+
 Base URL:
 /api/
 Products
@@ -310,7 +314,9 @@ Box Recommendation
 POST /api/orders/<id>/recommend-box/
 This is the main business endpoint.
 It evaluates the order against available boxes and returns the recommended box along with the supporting calculations and explanation.
+
 10. Example Recommendation Flow
+
 Create Products
       │
       ▼
@@ -342,9 +348,11 @@ Apply Cost Tie-Breaker
       │
       ▼
 Return Recommended Box
+
 11. Running the Project Locally
+
 1. Clone the Repository
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone :https://github.com/Naivedya2004/Internship_Project
 cd BoxSelect
 2. Create a Virtual Environment
 Windows PowerShell:
@@ -363,7 +371,9 @@ System check identified no issues
 python manage.py runserver
 The API will be available at:
 http://127.0.0.1:8000/
+
 12. Django Admin
+
 The project includes Django Admin for managing:
 - Products
 - Boxes
@@ -375,7 +385,9 @@ Then start the server:
 python manage.py runserver
 Open:
 http://127.0.0.1:8000/admin/
+
 13. Testing
+
 The project uses Django's built-in testing framework.
 Run all tests:
 python manage.py test
@@ -400,7 +412,9 @@ Tests include:
 - Order item string representation
 - Product deletion protection
 Business Logic Tests
+
 Tests include:
+
 - Total order weight
 - Product rotation
 - Product dimension failure
@@ -421,7 +435,9 @@ Tests include:
 - Successful box recommendation
 - No suitable box response
 - Empty order rejection
+
 14. AI-Assisted Development
+
 AI tools were used during development for assistance with:
 - Project structure
 - Django implementation
@@ -440,7 +456,9 @@ for returning created order data.
 Further details are documented in:
 AI_USAGE.md
 The exported AI conversation transcript should be included separately in the repository as required by the assignment.
+
 15. Design Decisions
+
 Why Django REST Framework?
 Django REST Framework provides:
 - Serializers
@@ -461,7 +479,9 @@ The required decision can be explained using:
 - Cost
 A deterministic approach makes every recommendation reproducible and explainable.
 AI was therefore used as a development assistant rather than as an opaque runtime decision-maker.
+
 16. Assumptions
+
 The implementation makes the following assumptions:
 1. Product dimensions are measured in centimeters.
 2. Product weight is measured in kilograms.
@@ -474,7 +494,9 @@ The implementation makes the following assumptions:
 9. The system selects the smallest suitable box by internal volume.
 10. Lower cost is used as the first tie-breaker.
 11. Database ID is used as the final deterministic tie-breaker.
+
 17. Error Handling
+
 The API returns appropriate error responses for invalid or impossible requests.
 Examples include:
 Invalid Product
@@ -503,7 +525,9 @@ Current limitations include:
 - No persistent recommendation history
 - No frontend application
 The most important algorithmic limitation is that multi-product packing uses a deterministic single-row heuristic rather than solving general 3D bin packing.
+
 19. Future Improvements
+
 Possible production improvements include:
 - PostgreSQL
 - Authentication and role-based access
@@ -518,7 +542,9 @@ Possible production improvements include:
 - Docker-based deployment
 - CI/CD pipeline
 - Monitoring and logging
+
 20. Submission Files
+
 The assignment submission should contain:
 BoxSelect/
 │
@@ -529,18 +555,20 @@ BoxSelect/
 ├── Test cases
 └── Exported AI chat transcript
 The final project should be submitted as a single ZIP archive as requested by the assignment.
-21. Learning Reflection
-The assignment requires the candidate to answer:
-What did you learn in this assignment?
 
-This section should be written personally by the candidate based on their actual experience while completing the assignment.
-It has intentionally not been AI-generated.
+21. Learning Reflection
+
+I learned how to make a project with proper AI Usage and how to make it efficent and i also got to showcase
+my skills which will be of good use to your organization.
+
+
 22. Author
+
 Naivedya Dubey
 B.Tech — Computer Science Engineering
 Specialization: Artificial Intelligence & Machine Learning
 GitHub:
-<YOUR_GITHUB_PROFILE_URL>
+https://github.com/Naivedya2004
 23. License
 This project was developed as part of a technical hiring assignment.
 
@@ -549,4 +577,4 @@ This project was developed as part of a technical hiring assignment.
 There is one deliberate placeholder:
 
 ```text
-<YOUR_GITHUB_REPOSITORY_URL>
+https://github.com/Naivedya2004/Internship_Project
